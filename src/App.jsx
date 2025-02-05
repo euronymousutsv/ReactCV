@@ -4,29 +4,31 @@ import NameCard from "./components/NameCard";
 import ExperienceCard from "./components/ExperienceCard";
 import EducationCard from "./components/EducationCard";
 import { Col, Container, Row } from "react-bootstrap";
+import Sidebar from "./components/SideBarComponent/Sidebar";
+
 const App = () => {
   return (
     <>
-      <Container>
+      <Container fluid className="bg-primary" style={{ height: "100vh" }}>
         <Row>
-          <Col>
-            <NameCard
-              Name={"Utsav"}
-              Profession={"IT Consultant"}
-              Location={"Sydney NSW"}
-            />
-            <ExperienceCard
-              CompanyName={"Woolworths"}
-              WorkingPeriod={"November 2023 - Present"}
-              Position={"Team Member"}
-            />
+          <Col sm={8} md={4} lg={2} className="bg-danger">
+            <Sidebar />
           </Col>
           <Col>
-            {" "}
+            <NameCard
+              name={"Utsav"}
+              profession={"IT Consultant"}
+              location={"Sydney NSW"}
+            />
+            <ExperienceCard
+              companyName={"Woolworths"}
+              workingPeriod={"November 2023 - Present"}
+              position={"Team Member"}
+            />
             <EducationCard
-              Course={"Bachelor's degree, Mobile Application Development"}
-              InstituteName={"Academy of Interactive Technology"}
-              StudyPeriod={"February 2021 - May 2025"}
+              course={"Bachelor's degree, Mobile Application Development"}
+              instituteName={"Academy of Interactive Technology"}
+              studyPeriod={"February 2021 - May 2025"}
             />
           </Col>
         </Row>
