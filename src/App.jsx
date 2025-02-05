@@ -11,7 +11,7 @@ const App = () => {
     <>
       <Container fluid className="bg-primary" style={{ height: "100vh" }}>
         <Row>
-          <Col sm={8} md={4} lg={2} className="bg-danger">
+          <Col sm={6} md={4} className="bg-danger">
             <Sidebar />
           </Col>
           <Col>

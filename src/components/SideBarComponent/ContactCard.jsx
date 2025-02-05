@@ -1,9 +1,11 @@
-const ContactCard = (phoneNumber, Email) => {
+const ContactCard = ({ phoneNumber, email }) => {
   return (
     <>
-      <div>Contact</div>
-      <h3>{phoneNumber}</h3>
-      <h3>{Email}</h3>
+      <p>
+        <h2>Contact</h2>
+        <h4>{phoneNumber}</h4>
+        <h4>{email}</h4>
+      </p>
     </>
   );
 };
