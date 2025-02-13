@@ -9,30 +9,43 @@ import Sidebar from "./components/SideBarComponent/Sidebar";
 const App = () => {
   return (
     <>
-      <Container fluid className="bg-primary" style={{ height: "100vh" }}>
-        <Row>
-          <Col sm={6} md={4} className="bg-danger">
-            <Sidebar />
-          </Col>
-          <Col>
-            <NameCard
-              name={"Utsav"}
-              profession={"IT Consultant"}
-              location={"Sydney NSW"}
-            />
-            <ExperienceCard
-              companyName={"Woolworths"}
-              workingPeriod={"November 2023 - Present"}
-              position={"Team Member"}
-            />
-            <EducationCard
-              course={"Bachelor's degree, Mobile Application Development"}
-              instituteName={"Academy of Interactive Technology"}
-              studyPeriod={"February 2021 - May 2025"}
-            />
-          </Col>
-        </Row>
-      </Container>
+      <div className="profile-container">
+        <Sidebar />
+        <div className="main-info gap-4">
+          <NameCard
+            name={"Utsav"}
+            profession={"IT Enthusiast"}
+            location={"Sydney"}
+          />
+          <hr style={{ borderWidth: "3px" }} />
+          <br />
+          <h3>Experience</h3>
+          <ExperienceCard
+            companyName={"Woolworths"}
+            position={"Team Member"}
+            workingPeriod={"November 2023- Present(1 year 4 months)"}
+          />
+          <hr style={{ borderWidth: "3px" }} />
+          <br />
+          <h3>Education</h3>
+          <EducationCard
+            instituteName={"Academy of Interactive Technology"}
+            course={"Bachelor's degree, Mobile Application Development"}
+            studyPeriod={"February 2021 - May 2025"}
+          />
+          <EducationCard
+            instituteName={"Saipal Academy"}
+            course={"A Level, Computer Science"}
+            studyPeriod={"February 2017 - December 2020"}
+          />
+
+          <EducationCard
+            instituteName={"Dented Code Academy"}
+            course={"Full Stack Development"}
+            studyPeriod={"January 2025"}
+          />
+        </div>
+      </div>
     </>
   );
 };

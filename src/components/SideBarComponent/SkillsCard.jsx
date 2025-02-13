@@ -4,9 +4,9 @@ export const SkillsCard = ({ Skills }) => {
   console.log(Skills);
   return (
     <>
-      <p>
-        <h3>Top Skills</h3>
-        <ul>
+      <div>
+        <h4>Top Skills</h4>
+        <ul style={{ paddingLeft: "0px" }}>
           {Skills.map((skill) => (
             <li
               key={skill.id}
@@ -16,7 +16,7 @@ export const SkillsCard = ({ Skills }) => {
             </li>
           ))}
         </ul>
-      </p>
+      </div>
     </>
   );
 };
